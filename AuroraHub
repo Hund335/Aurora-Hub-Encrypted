@@ -46,6 +46,11 @@ if DeviceType == "Mobile" then
     local dragStart = nil
     local startPos = nil
 
+    button.MouseButton1Click:Connect(function()
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "LeftControl", false, game)
+        game:GetService("VirtualInputManager"):SendKeyEvent(false, "LeftControl", false, game)
+    end)
+
     -- For Mobile: Handle touch inputs
     button.InputBegan:Connect(function(input)
         if input.UserInputType == Enum.UserInputType.Touch then
