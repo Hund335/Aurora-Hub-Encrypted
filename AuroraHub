@@ -38,16 +38,17 @@ if DeviceType == "Mobile" then
         game:GetService("VirtualInputManager"):SendKeyEvent(false, "LeftControl", false, game)
     end)
 
+    -- For Mobile: Handle touch inputs
     button.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            local mousePos = input.Position
+        if input.UserInputType == Enum.UserInputType.Touch then
+            local touchPos = input.Position
             local buttonPos = button.AbsolutePosition
             local buttonSize = Vector2.new(button.AbsoluteSize.X, button.AbsoluteSize.Y)
 
             local zoneStart = buttonPos - (dragZoneSize - buttonSize) / 2
             local zoneEnd = buttonPos + (dragZoneSize + buttonSize) / 2
 
-            if mousePos.X >= zoneStart.X and mousePos.X <= zoneEnd.X and mousePos.Y >= zoneStart.Y and mousePos.Y <= zoneEnd.Y then
+            if touchPos.X >= zoneStart.X and touchPos.X <= zoneEnd.X and touchPos.Y >= zoneStart.Y and touchPos.Y <= zoneEnd.Y then
                 isDragging = true
                 dragStart = input.Position
                 startPos = button.Position
@@ -55,8 +56,9 @@ if DeviceType == "Mobile" then
         end
     end)
 
+    -- For Mobile: Update button position while dragging
     button.InputChanged:Connect(function(input)
-        if isDragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+        if isDragging and input.UserInputType == Enum.UserInputType.Touch then
             local delta = input.Position - dragStart
             button.Position = UDim2.new(
                 startPos.X.Scale,
@@ -67,8 +69,9 @@ if DeviceType == "Mobile" then
         end
     end)
 
+    -- For Mobile: Stop dragging when touch ends
     button.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        if input.UserInputType == Enum.UserInputType.Touch then
             isDragging = false
         end
     end)
