@@ -29,7 +29,7 @@
   
 ### Paste This into your Executor
 ```
-SOON
+ loadstring(game:HttpGet("https://github.com/Hund335/Aurora-Hub-Encrypted/raw/refs/heads/main/AuroraHub"))()
 ```
 
 Credits To me i guess
