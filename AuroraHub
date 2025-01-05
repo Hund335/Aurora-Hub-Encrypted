@@ -1,3 +1,4 @@
+getgenv().Aurora = false
 if getgenv().Aurora then warn("Aurora Hub is Already Executed") return end
 getgenv().Aurora = true
 
