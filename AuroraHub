@@ -21,7 +21,7 @@ local Window = Fluent:CreateWindow({
 })
 
 
-if DeviceType == "PC" then
+if DeviceType == "Mobile" then
     local screenGui = Instance.new("ScreenGui")
     screenGui.Name = "ButtonGui"
     screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
