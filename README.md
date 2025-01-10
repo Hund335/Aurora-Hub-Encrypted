@@ -6,26 +6,31 @@
   - Teleport to Player
   - Teleport to Location
   - Auto Sell Anywhere
-  - Sell Anywhere
+  - Sell Anywhere Bypass
+  - Auto Trade
+  - Advanced Webhook
+  - Performance increasing Features
   - Nice UI
   - Built in script executor
+  - Discord
     
 ## 🔌Compatibility
 * Swift
 * Xeno
 * Delta
+  
+* DM me on Discord if you found another working one!
 
 ## 🔜 Planned Features
 * Making Closing the script delete all the things done by it like added ui
 * Player ESP
 * Auto Totem
-* Auto Trade
-* Making Autofarm more reliable
-* Performance increasing Features
 * Statistics Tab
-* Advanced Webhook
-* Discord
 * Fixing Bugs
+* Auto Progression
+* Auto Heavens rod
+* Auto Appraise
+  
   
 ### Paste This into your Executor
 ```
